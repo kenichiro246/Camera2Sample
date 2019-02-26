@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Prism;
@@ -18,6 +19,12 @@ namespace Camera2Sample.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+        }
+
+        public void ShowCameraPage()
+        {
+            var intent = new Intent(this, typeof(GoogleCameraView.MainActivity));
+            StartActivity(intent);
         }
     }
 

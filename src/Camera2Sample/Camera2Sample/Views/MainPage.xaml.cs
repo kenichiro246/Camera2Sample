@@ -13,5 +13,11 @@ namespace Camera2Sample.Views
         {
             InitializeComponent();
         }
+
+        private void Button1_Clicked(object sender, EventArgs e)
+        {
+            var a = DependencyService.Get<ICamera>();
+            a.ShowCameraPage();
+        }
     }
 }
